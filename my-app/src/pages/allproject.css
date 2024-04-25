@@ -1,0 +1,54 @@
+.portfolio-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game-card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Добавляем переход для цвета контура */
+    overflow: hidden;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    border-color: #007bff4f; /* Голубой цвет контура при наведении */
+  }
+  
+  .game-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card-img-top {
+    height: 170px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    background-color: #181b1d28;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #6c757d; /* Цвет текста */
+  }
+  
+  .card-text {
+    font-size: 14px;
+    color: #6c757d; /* Цвет текста */
+  }
+  
+  /* Изменение цвета текста при наведении */
+  .game-card:hover .card-title,
+  .game-card:hover .card-text {
+    color: #007bff; /* Голубой цвет текста при наведении */
+  }
+  

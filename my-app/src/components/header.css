@@ -1,0 +1,29 @@
+.custom-dropdown {
+    
+    color: #035d81; /* Белый цвет текста в выпадающем меню */
+    transition: background-color 0.3s ease; /* Анимация изменения цвета фона */
+}
+
+.custom-dropdown .dropdown-item {
+    color: #035d81; /* Белый цвет текста в пунктах выпадающего меню */
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: #555; /* Темно-серый цвет при наведении на пункт меню */
+}
+
+.logo {
+    transition: transform 0.3s ease; /* Добавляем переход для свойства transform */
+}
+
+.logo:hover {
+    transform: rotate(3deg); /* Пример: вращение на 3 градуса при наведении */
+}
+
+.nav-link {
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.nav-link:hover {
+    color: #035d81; /* Изменение цвета при наведении */
+}
