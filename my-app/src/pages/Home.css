@@ -1,178 +1,69 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-
-
-.slider-container {
-  max-width: 800px;
-  margin: 50px auto 0; /* Updated margin with top margin of 20px */
-  border-radius: 10px;
-  overflow: hidden;
-  margin-left: 100px;
-}
-
-
-.slider-image {
-  width: 800px; /* Ширина изображения в слайдере */
-  height: 420px; /* Высота изображения в слайдере */
-  border-radius: 10px; /* Округление углов изображений */
-}
-
-.image-wrapper {
-  position: relative;
-  display: inline-block; /* Сделать обертку блочным элементом, чтобы кнопка и изображение были в одной линии */
-}
-
-.image-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  background-color: rgba(0, 123, 255, 0.8);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.image-button:hover {
-  background-color: rgba(0, 123, 255, 1);
-  transform: scale(1.05);
-}
 /* Home.css */
 
-/* Slider Arrows */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 8px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #15202B;
+    color: #FFFFFF;
+    overflow: hidden; /* Скрыть лишнее, если контент выходит за пределы */
 }
 
-.slider-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: -50px; /* Поднятие контента выше */
 }
 
-.prev {
-  left: 20px; /* Position the left arrow */
+.react-logo {
+    width: 200px;
+    margin: 20px;
+    animation: spin 2s linear infinite; /* Анимация вращения */
+    align-self: center; /* Выравнивание по центру */
 }
 
-.next {
-  right: 20px; /* Position the right arrow */
+.home-text {
+    margin-bottom: 20px;
+    align-self: center; /* Выравнивание по центру */
 }
 
-/* Поиск */
-.search-container {
-  display: flex;
-  justify-content: flex-start; /* Выравнивание по левому краю */
-  align-items: center;
-  margin-bottom: 20px; /* Отступ снизу для разделения поисковой строки и слайдера */
-  margin-top: 40px; /* Отступ от шапки */
-}
-.search-input {
-  padding: 4px;
-  border-radius: 4px;
-  margin-right: 10px;
-  width: 150px; /* Ширина поисковой строки */
+.button-container {
+    display: flex;
+    justify-content: center; /* Выравнивание кнопок по центру */
+    margin-top: 20px; /* Добавление отступа сверху */
 }
 
-.search-button {
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: none;
-  background-color: #03244759; /* Измененный цвет кнопки поиска */
-  color: white;
-  cursor: pointer;
-  top: -100px;
+.home-button {
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin: 0 10px; /* Расстояние между кнопками справа и слева */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Стиль указателя при наведении */
+    transition: transform 0.3s ease; /* Плавное изменение размера при наведении */
+    background-color: transparent; /* Без фона */
+    border: 2px solid #61DAFB; /* Граница */
 }
 
-.search-button:hover {
-  background-color: #0056b3;
+.home-button:hover {
+    transform: scale(1.1); /* Увеличение размера при наведении */
 }
 
-.button-images-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+.dark-button {
+    background-color: #0D4F6E; /* Более темный фон */
+    border: none;
 }
 
-.button-image-wrapper {
-  margin: 100px; /* Большой отступ между фото */
-}
-
-.image-button {
-  display: block;
-  width: 500px;
-  height: 350px;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
- 
-  border: none; /* Remove the border */
-  overflow: hidden; /* Скрытие выхода за границы */
-}
-
-.button-text {
-  position: absolute;
-  bottom: 30%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  color: white;
-  padding: 5px;
-  font-size: 30px; /* Регулируйте размер шрифта по необходимости */
-  z-index: 1; /* Помещаем текст над фото */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень тексту */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Добавляем анимацию изменения цвета и тени текста */
-}
-
-.image-button:hover .button-text {
-  color: #55acee; /* Изменение цвета текста при наведении на фото */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Увеличиваем тень при наведении */
-}
-/* NewArrivalsBlock.css */
-
-.new-arrivals-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 50px 0;
-}
-
-.new-arrival {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.new-arrival-image {
-  width: 200px; /* Adjust image width as needed */
-  height: 300px; /* Adjust image height as needed */
-  margin-bottom: 10px;
-}
-
-.new-arrival-details {
-  text-align: center;
-}
-
-.new-arrival-details h3 {
-  margin-bottom: 5px;
-}
-
-.new-arrival-details p {
-  color: #666;
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

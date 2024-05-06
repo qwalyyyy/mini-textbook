@@ -13,11 +13,11 @@
 }
 
 .logo {
-    transition: transform 0.3s ease; /* Добавляем переход для свойства transform */
+    transition: transform 0.4s ease; /* Добавляем переход для свойства transform */
 }
 
 .logo:hover {
-    transform: rotate(3deg); /* Пример: вращение на 3 градуса при наведении */
+    transform: rotate(45deg); /* Пример: вращение на 3 градуса при наведении */
 }
 
 .nav-link {

@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #15202B;
+  color: #fff;
+}
+
+.header {
+  background-color: #15202B;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo2 {
+  width: 350px;
+  
+}
+
+.code-window {
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00000093;
+  background-color: #ffffff;
+  overflow-x: auto; /* Добавляем прокрутку по горизонтали */
+}
+
+.documentation-container {
+  text-align: center;
+  background-color: #15202B;
+  padding: 50px;
+}
+
+.documentation-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.chapter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.chapter-button {
+  flex-basis: calc(33.33% - 20px);
+  padding: 15px 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chapter-button:hover {
+  color: #001f3f;
+  background-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
