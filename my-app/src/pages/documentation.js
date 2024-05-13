@@ -7,13 +7,12 @@ const Documentation = () => {
   return (
     <div>
       <div className="header">
-        <img src={reactlogo2} alt="Логотип" className="logo2" /> 
+        <img src={reactlogo2} alt="Логотип" className="logo2" />
+        <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" className="react-button">Официальный сайт React</a>
       </div>
-      <div className="code-window">
-        <pre><code>npx create-next-app@latest  </code></pre>
-      </div>
+     
       <div className="documentation-container">
-        <h1 className="documentation-title">Название вашей документации</h1>
+        <h1 className="documentation-title"> React Documentation</h1>
         <div className="chapter-buttons">
           <Link to="/documentation/IntroductionPage" className="chapter-button">Введение</Link>
           <Link to="/documentation/components-and-props" className="chapter-button">Компоненты и Props</Link>
