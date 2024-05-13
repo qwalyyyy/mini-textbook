@@ -1,39 +1,46 @@
-import React from "react";
+
+import React from 'react';
+
 import { Container, Row, Col } from 'react-bootstrap';
-import './footer.css'; // Import style file for footer
+import './footer.css'; 
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-    return (
-        <footer className="footer">
-            <Container>
-                <Row>
-                    <Col xs={12} sm={6} md={4}>
-                        <h5>About Us</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <h5>Contact Us</h5>
-                        <p>Email: contact@example.com</p>
-                        <p>Phone: +1234567890</p>
-                    </Col>
-                    <Col xs={12} md={4}>
-                        <h5>Follow Us</h5>
-                        <div className="social-icons">
-                            <a href="#"><i className="fab fa-facebook"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                        </div>
-                    </Col>
-                </Row>
-                <hr />
-                <Row>
-                    <Col xs={12} className="text-center">
-                        <p>&copy; 2024 Epic Games. All rights reserved.</p>
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
-    );
+  return (
+    <footer className="bg-dark text-white py-5">
+      <Container>
+        <Row>
+          <Col md={4}>
+            <h5>Основы React</h5>
+            <ul className="list-unstyled">
+              <li><Link to="/documentation/introduction" className="text-white">Введение</Link></li>
+              <li><Link to="/documentation/components" className="text-white">Компоненты</Link></li>
+              <li><Link to="/documentation/hooks" className="text-white">Хуки</Link></li>
+            </ul>
+          </Col>
+          <Col md={4}>
+            <h5>Дополнительно</h5>
+            <ul className="list-unstyled">
+              <li><Link to="/documentation/styling" className="text-white">Стилизация</Link></li>
+              <li><Link to="/documentation/routing" className="text-white">Маршрутизация</Link></li>
+              <li><Link to="/documentation/state-management" className="text-white">Управление состоянием</Link></li>
+            </ul>
+          </Col>
+          <Col md={4}>
+            <h5>Сообщество</h5>
+            <ul className="list-unstyled">
+              <li><a href="https://reactjs.org/" className="text-white" target="_blank" rel="noopener noreferrer">Официальный сайт React</a></li>
+              <li><a href="https://ru.reactjs.org/community/support.html" className="text-white" target="_blank" rel="noopener noreferrer">Поддержка</a></li>
+              <li><a href="https://ru.reactjs.org/community/conferences.html" className="text-white" target="_blank" rel="noopener noreferrer">Конференции</a></li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+      <div className="text-center mt-4">
+        <p>&copy; {new Date().getFullYear()} React Учебник. Все права защищены.</p>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

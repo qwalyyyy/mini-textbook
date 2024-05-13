@@ -1,0 +1,65 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Main container styles */
+.main-container {
+  padding: 20px;
+}
+
+/* Heading styles */
+.main-heading,
+.section-heading,
+.sidebar-heading {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Text styles */
+.section-text {
+  line-height: 1.6;
+}
+
+/* Button styles */
+.show-answer-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.show-answer-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sidebar styles */
+
+.sidebar-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: 10px;
+}
+
+.sidebar-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.sidebar-list a:hover {
+  text-decoration: underline;
+}
+
+/* Answer section styles */
+.answer-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f054;
+  border-radius: 5px;
+}

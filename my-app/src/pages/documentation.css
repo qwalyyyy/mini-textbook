@@ -1,73 +1,233 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #15202B;
-  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc; /* Более мягкий цвет текста */
+  background-color: #15202B; /* Темный фон */
 }
+h1{
 
+}
 .header {
-  background-color: #15202B;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
+  background-color: #15202B; /* Цвет для header */
 }
 
 .logo2 {
   width: 350px;
-  
 }
 
 .code-window {
-  padding: 15px;
-  margin: 15px auto;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #00000093;
-  background-color: #ffffff;
-  overflow-x: auto; /* Добавляем прокрутку по горизонтали */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #f8f9fa, #ffffff); /* Градиентный фон для кодового окна */
+  overflow-x: auto;
+  position: relative; /* Позиционирование для анимации */
+}
+
+pre {
+  margin: 0;
+  font-size: 16px;
+  white-space: pre-wrap;
 }
 
 .documentation-container {
-  text-align: center;
-  background-color: #15202B;
+  background-color: #1a2733; /* Чуть более темный фон */
   padding: 50px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .documentation-title {
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 42px;
+  margin-bottom: 40px;
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ccc; 
+  font-family: 'Roboto', sans-serif;
 }
 
 .chapter-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 20px;
+  margin-top: 40px;
 }
 
 .chapter-button {
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: calc(30% - 20px); /* Лучше распределение кнопок на разных разрешениях */
   padding: 15px 25px;
   font-size: 18px;
+  font-weight: bold;
   color: #fff;
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 8px;
+  background-color: #007bff; /* Сохраняем основной цвет для кнопок */
+  border: 2px solid #007bff;
+  border-radius: 10px;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Позиционирование для анимации */
+  overflow: hidden; /* Скрытие переполнения */
+}
+
+.chapter-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chapter-button:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .chapter-button:hover {
-  color: #001f3f;
-  background-color: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #0056b3; /* Цвет при наведении */
+  transform: translateY(-3px); /* Поднятие кнопки */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Усиленная тень */
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chapter-button:active {
+  transform: scale(0.95); /* Нажатие кнопки */
+}
+
+/* Эффект рамки при наведении на код */
+.code-window:hover {
+  border-color: #007bff;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Черный цвет для текста в кодовом окне */
+.code-window code {
+  color: #000;
+}
+
+/* Выделение текста в кодовом окне при старте */
+.code-window code::selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Выделение текста в кодовом окне при выделении мышью */
+.code-window code::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.code-window code::selection,
+.code-window code::-moz-selection {
+  text-shadow: none;
+}
+
+/* Эффект рамки при наведении на код */
+.code-window:hover {
+  border-color: #007bff;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Дополнительные анимации для кнопок */
+.chapter-button.effect-1 {
+  overflow: hidden;
+}
+
+.chapter-button.effect-1:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.chapter-button.effect-1:hover:before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.chapter-button.effect-2 {
+  overflow: hidden;
+}
+
+.chapter-button.effect-2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.chapter-button.effect-2:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.chapter-button.effect-3 {
+  overflow: hidden;
+}
+
+.chapter-button.effect-3:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s ease;
+}
+
+.chapter-button.effect-3:hover:before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+/* Стили для кнопки "Официальный сайт React" */
+.react-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #61dafb; /* Цвет кнопки */
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.react-button:hover {
+  background-color: #0e83cd; /* Цвет при наведении */
+  transform: translateY(-3px); /* Поднятие кнопки */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Усиленная тень */
+}
+
+.react-button:active {
+  transform: scale(0.95); /* Нажатие кнопки */
 }

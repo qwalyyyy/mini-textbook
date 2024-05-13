@@ -1,0 +1,54 @@
+body {
+    
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif; /* Установка шрифта */
+}
+
+.container1 {
+    max-width: 1200px; /* Ширина контейнера */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Улучшенный стиль для кнопок */
+.button {
+    display: inline-block;
+    padding: 12px 24px; /* Немного увеличил отступы кнопок */
+    font-size: 20px; /* Увеличил размер шрифта кнопок */
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 8px; /* Увеличил радиус скругления углов кнопок */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Плавный переход при наведении */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тень для кнопок */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Эффект поднятия кнопки при наведении */
+}
+
+/* Улучшенный стиль для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* Другой шрифт для заголовков */
+    color: #333;
+    margin-bottom: 15px; /* Немного увеличил отступ после заголовков */
+}
+
+/* Улучшенный стиль для блоков текста */
+.description, .feature-list, .getting-started-description, .core-concepts-description, .video-tutorial-description, .next-steps-description {
+    line-height: 1.6; /* Увеличил межстрочный интервал для лучшей читаемости текста */
+}
+
+/* Дополнительные стили для отображения видео */
+.video-container {
+    margin-bottom: 30px; /* Немного увеличил отступ после блока с видео */
+}
+
+/* Дополнительные стили для заметок и советов */
+.note, .tip {
+    border-left: 4px solid #007bff; /* Добавил левую границу с цветом для выделения заметок и советов */
+    padding-left: 10px; /* Увеличил отступ слева для текста заметок и советов */
+}

@@ -1,0 +1,38 @@
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #343a40;
+}
+
+pre {
+  background-color: #272c34;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
